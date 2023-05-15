@@ -2,7 +2,7 @@ import { IUser } from "./user.interface";
 import { User } from "./user.model";
 
 export const createUsrToDB = async (payload: IUser): Promise<IUser> => {
-  const user = await new User(payload)
+  const user = new User(payload)
   await user.save();
   return user;
 }
@@ -10,6 +10,11 @@ export const createUsrToDB = async (payload: IUser): Promise<IUser> => {
 export const getUsersFromDB = async () => {
   const users = await User.find();
   return users;
+}
+
+export const getUserFromDB = async (payload: string): Promise<IUser | null> => {
+  const user = await User.findOne({ id: payload })
+  return user
 }
 
 /*{
