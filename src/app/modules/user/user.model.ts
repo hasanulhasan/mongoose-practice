@@ -29,4 +29,4 @@ export const userSchema = new Schema<IUser>({
   presentAddress: { type: String, required: true }
 });
 
-const User = model<IUser>('User', userSchema);
+export const User = model<IUser>('User', userSchema);
