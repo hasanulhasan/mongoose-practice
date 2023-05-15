@@ -12,7 +12,6 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// app.get('/api/v1/user', userRoutes)
 app.use('/api/v1/user', userRoutes)
 
 app.get('/test', (req, res) => {
@@ -29,3 +28,5 @@ export default app;
  step3: Model
  step4: Database Query
  */
+
+//Route -> controller -> service

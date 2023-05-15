@@ -1,4 +1,4 @@
-// creating interface
+
 export interface IUser {
   id: string;
   role: 'student';
